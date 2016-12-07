@@ -1,0 +1,70 @@
+// Headlines
+
+.top-row{
+  @include span-columns(12);
+  height: 396px;
+}
+
+.weather {
+  @include span-columns(2.4 of 12);
+  height: 100%;
+  img {
+    width: 100%;
+  }
+
+}
+
+.right-article {
+  @include span-columns(2.4 of 12);
+  @include omega;
+  background-color: $grey;
+  height: 100%;
+  img {
+    width: 100%;
+
+  }
+}
+.headline {
+  @include span-columns(7.2 of 12);
+  background-color: $grey;
+  height: 100%;
+  .headline-wrapper {
+    @include span-columns(12);
+    img {
+      @include span-columns(8 of 12);
+    }
+    .text-content {
+      @include span-columns(4 of 12);
+    }
+  }
+}
+
+.bottom-row {
+  @include span-columns(12);
+  height: 396px;
+  .article, .empty {
+    @include span-columns(2.4 of 12);
+    @include article-reset;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  .sub-article {
+    @include article-reset;
+    height: 30.7%;
+    margin-bottom: 6.33%;
+    background-color: $grey;
+    border-top: 1px solid $blue;
+    h5 span{
+      color: $blue;
+    }
+  }
+}
+.article:nth-of-type(-n+3) {
+  background-color: $grey;
+}
+
+.bottom-row .empty {
+  background-color: $white;
+}

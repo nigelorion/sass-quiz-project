@@ -4,6 +4,7 @@
 }
 .upper-navbar {
   overflow: hidden;
+  height: 56px;
 
 }
 .upper-navbar ul {
@@ -25,32 +26,30 @@
 }
 .left-nav {
   float: left;
-  width: 50%
+  width: 80%;
 
 }
 .right-nav {
-  width: 50%;
-  float: right;
+  width:20%;
+  float: left;
   height: 100%;
   text-align: right;
+  padding-right: 1%;
+
   ul {
-    display: flex;
-    margin-left: auto;
-    // width: 20%;
+    display: block;
+    height: inherit;
+    padding-top: 15px;
     li {
       display: inline-block;
-
     }
   }
 }
 
 
-// .upper-navbar ul li:nth-child(n+7) {
-//   float: right;
-// }
 .logo {
   text-align: right;
-  margin: 1% 2%;
+  margin: 0 2% 1% 2%;
 }
 
 .main-navbar {
@@ -68,7 +67,7 @@
 
 .browse-menu {
   background-color: $dark-grey;
-  width: 13%;
+  width: 15%;
   display: flex;
   margin: 0 0 0 auto;
   p {
@@ -80,6 +79,9 @@
 .upper-navbar .navImage {
   margin: auto 0;
   padding: 0;
+}
+.main-navbar .navImage img  {
+  vertical-align: bottom;
 }
 
 .upper-navbar li:nth-of-type(2) {
