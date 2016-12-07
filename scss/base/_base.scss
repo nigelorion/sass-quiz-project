@@ -1,0 +1,10 @@
+* {
+  @include reset;
+}
+
+body {
+  background-color: $grey;
+}
+ div {
+   border: 1px dashed green;
+ }
