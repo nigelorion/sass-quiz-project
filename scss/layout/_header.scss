@@ -55,9 +55,13 @@
 .main-navbar {
   display: flex;
   background-color: $dark-blue;
+  min-height: 45px;
   ul {
     width: 80%;
     margin: 1% 2% 1% 0;
+    @media (max-width: 1145px) {
+      display: none;
+    }
     li {
       display: inline-block;
       padding: 0 .7%;

@@ -2,23 +2,38 @@
 
 .top-row{
   @include span-columns(12);
-  height: 396px;
+  height: 360px;
+  color: $text-grey;
+  @media (max-width: 1000px) {
+    min-width: 980px;
+    margin-bottom: 5px;
+  }
 }
 
 .weather {
   @include span-columns(2.4 of 12);
   height: 100%;
-  img {
-    width: 100%;
+  @media (max-width: 1000px) {
+      @include span-columns(12 of 12);
+      height: 50px;
+      img {
+        display: none;
+      }
+    }
+    img {
+      width: 100%;
+    }
   }
-
-}
 
 .right-article {
   @include span-columns(2.4 of 12);
   @include omega;
   background-color: $grey;
   height: 100%;
+  @media (max-width: 1000px) {
+      @include span-columns(4 of 12);
+      height: 310px;
+  }
   img {
     width: 100%;
 
@@ -28,6 +43,10 @@
   @include span-columns(7.2 of 12);
   background-color: $grey;
   height: 100%;
+  @media (max-width: 1000px) {
+      @include span-columns(8 of 12);
+      height: 310px;
+    }
   .headline-wrapper {
     @include span-columns(12);
     img {
@@ -35,6 +54,16 @@
     }
     .text-content {
       @include span-columns(4 of 12);
+      max-height:350px;
+      span {
+        color: $dark-red;
+      }
+      h3 span {
+        color: $blue;
+      }
+      p {
+        font-size: 0.85em;
+      }
     }
   }
 }
@@ -42,23 +71,46 @@
 .bottom-row {
   @include span-columns(12);
   height: 396px;
-  .article, .empty {
+  .article, {
     @include span-columns(2.4 of 12);
     @include article-reset;
     height: 100%;
+    @media (max-width: 1000px) {
+        @include span-columns(3 of 12);
+        height: 360px;
+      }
+    }
+  .empty {
+    @include span-columns(2.4 of 12);
+    @include article-reset;
+    height: 100%;
+    @media (max-width: 1000px) {
+        @include span-columns(2.4 of 12);
+        width: 0;
+        @include article-reset;
+      }
   }
   img {
     width: 100%;
   }
+  h4 {
+    color: $text-grey;
+  }
   .sub-article {
     @include article-reset;
-    height: 30.7%;
-    margin-bottom: 6.33%;
+    height: 33%;
+    margin-bottom: 10px;
     background-color: $grey;
-    border-top: 1px solid $blue;
+    border-top: 1.5px solid $light-blue;
+    h5 {
+      color: $text-grey;
+    }
     h5 span{
       color: $blue;
     }
+  }
+  @media (max-width: 1000px) {
+    min-width: 980px;
   }
 }
 .article:nth-of-type(-n+3) {
