@@ -1,18 +1,3 @@
 * {
   @include reset;
 }
-
-body {
-  background-color: $grey;
-}
- div {
-  //  border: 2px dashed green;
- }
-
-section {
-  @include clearfix;
-  padding: 10px;
-  div {
-    padding: 5px;
-  }
-}
