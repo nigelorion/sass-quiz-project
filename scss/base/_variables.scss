@@ -1,1 +1,12 @@
+// cards
 
+  // colors
+
+  $cards__colors--1: rgba(163, 74, 46, 0.3);
+  $cards__colors--2: rgba(134, 124, 85, 0.3);
+  $cards__colors--3: rgba(185, 76, 118, 0.3);
+  $cards__colors--4: rgba(130, 113, 189, 0.3);
+
+  //colors array
+
+  $cards__colors: $cards__colors--1, $cards__colors--2, $cards__colors--3, $cards__colors--4;

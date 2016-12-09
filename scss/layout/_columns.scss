@@ -1,1 +1,28 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (min-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__content {
+    flex: 1;
+    margin: 2%;
+    padding: 1%;
+    &__img {
+      width: 50%;
+    }
+    @media (max-width: 600px) {
 
+      flex-grow: 1;
+    }
+  }
+}
+
+@for $i from 1 through length($cards__colors) {
+  .cards__content:nth-of-type(#{$i}) {
+    background-color: nth($cards__colors, $i);
+    background-image: url("../img/jewlery.png") no-repeat cover;
+  }
+}
