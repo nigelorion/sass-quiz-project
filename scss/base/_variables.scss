@@ -2,11 +2,38 @@
 
   // colors
 
-  $cards__colors--1: rgba(163, 74, 46, 0.3);
-  $cards__colors--2: rgba(134, 124, 85, 0.3);
-  $cards__colors--3: rgba(185, 76, 118, 0.3);
-  $cards__colors--4: rgba(130, 113, 189, 0.3);
+  $cards__colors--1: rgba(129, 163, 46, 0.8);
+  $cards__colors--2: rgba(85, 134, 116, 0.8);
+  $cards__colors--3: rgba(98, 76, 185, 0.8);
+  $cards__colors--4: rgba(189, 113, 152, 0.8);
+
+  //button colors
+
+  $button__color--3: rgba(55, 107, 195, 0.38);
+  $button__color--2: rgba(173, 173, 173, 0.32);
+  $button__color--1: rgba(247, 171, 234, 0.29);
 
   //colors array
 
   $cards__colors: $cards__colors--1, $cards__colors--2, $cards__colors--3, $cards__colors--4;
+
+  // images
+
+  $img1: "../img/jewlery.jpg";
+  $img2: "../img/3d.jpg";
+  $img3: "../img/screen.jpg";
+  $img4: "../img/metal.jpg";
+
+  $backgrounds: $img1, $img2, $img3, $img4;
+
+// main
+
+  // fonts
+
+  $header__font: 'Arvo', serif;
+  $container__font: 'Josefin Sans', sans-serif;
+
+  // font colors
+
+  $header__color: rgb(158, 91, 13);
+  $container__color: rgb(244, 244, 244);

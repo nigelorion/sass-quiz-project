@@ -1,0 +1,19 @@
+.content__btn {
+  margin: 5%;
+  color: lighten($header__color, 50%);
+  font-size: .8em;
+  padding: 3%;
+  border: solid $button__color--3 1px;
+  text-decoration: none;
+  background-color: $button__color--2;
+  @media (max-width: 547px) {
+    float: left;
+  }
+}
+
+.content__btn:hover {
+  background: $button__color--1;
+  text-decoration: none;
+  color: lighten($header__color, 80%);
+  cursor: pointer;
+}

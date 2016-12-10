@@ -1,0 +1,54 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+  @media (min-width: 950px) {
+    flex-direction: column;
+  }
+}
+
+.cards__content {
+  position: relative;
+  flex: 1;
+  padding: 1%;
+  @media (max-width: 600px) {
+    min-height: 200px;
+    .content__img {
+      float: left;
+      width: 40%;
+    }
+    .content__p {
+      width: 60%;
+      float: right;
+      padding: 0 3%;
+    }
+  }
+  @media (min-width: 675px) {
+    flex-basis: 50%;
+    margin: 0;
+
+  }
+}
+
+@for $i from 1 through length($cards__colors) {
+  .cards__content:nth-of-type(#{$i}) {
+    background: linear-gradient(nth($cards__colors, $i), nth($cards__colors, $i)), url(nth($backgrounds, $i));
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+}
+
+.content__img:hover {
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+
+.content__img {
+  width: 50%;
+  border: solid $button__color--1 4px;
+
+}

@@ -1,5 +1,7 @@
 .container {
-  background-color: rgba(221, 204, 193, 0.61);
-  margin: 2%;
+  background-color: lighten($cards__colors--2, 50%);
   text-align: center;
+  min-width: 400px;
+  max-width: 940px;
+  margin: 6%;
 }

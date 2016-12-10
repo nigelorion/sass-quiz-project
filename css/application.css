@@ -1,15 +1,6 @@
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .cards {
@@ -18,40 +9,101 @@ html {
   flex-wrap: wrap; }
   @media (min-width: 600px) {
     .cards {
-      flex-direction: row;
-      flex-wrap: wrap; } }
-  .cards__content {
-    flex: 1;
-    margin: 2%;
-    padding: 1%; }
-    .cards__content__img {
-      width: 50%; }
-    @media (max-width: 600px) {
-      .cards__content {
-        flex-grow: 1; } }
+      flex-direction: row; } }
+  @media (min-width: 950px) {
+    .cards {
+      flex-direction: column; } }
+
+.cards__content {
+  position: relative;
+  flex: 1;
+  padding: 1%; }
+  @media (max-width: 600px) {
+    .cards__content {
+      min-height: 200px; }
+      .cards__content .content__img {
+        float: left;
+        width: 40%; }
+      .cards__content .content__p {
+        width: 60%;
+        float: right;
+        padding: 0 3%; } }
+  @media (min-width: 675px) {
+    .cards__content {
+      flex-basis: 50%;
+      margin: 0; } }
 
 .cards__content:nth-of-type(1) {
-  background-color: rgba(163, 74, 46, 0.3);
-  background-image: url("../img/jewlery.png") no-repeat cover; }
+  background: linear-gradient(rgba(129, 163, 46, 0.8), rgba(129, 163, 46, 0.8)), url("../img/jewlery.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .cards__content:nth-of-type(2) {
-  background-color: rgba(134, 124, 85, 0.3);
-  background-image: url("../img/jewlery.png") no-repeat cover; }
+  background: linear-gradient(rgba(85, 134, 116, 0.8), rgba(85, 134, 116, 0.8)), url("../img/3d.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .cards__content:nth-of-type(3) {
-  background-color: rgba(185, 76, 118, 0.3);
-  background-image: url("../img/jewlery.png") no-repeat cover; }
+  background: linear-gradient(rgba(98, 76, 185, 0.8), rgba(98, 76, 185, 0.8)), url("../img/screen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .cards__content:nth-of-type(4) {
-  background-color: rgba(130, 113, 189, 0.3);
-  background-image: url("../img/jewlery.png") no-repeat cover; }
+  background: linear-gradient(rgba(189, 113, 152, 0.8), rgba(189, 113, 152, 0.8)), url("../img/metal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.content__img:hover {
+  filter: grayscale(100%);
+  cursor: pointer; }
+
+.content__img {
+  width: 50%;
+  border: solid rgba(247, 171, 234, 0.29) 4px; }
 
 .container {
-  background-color: rgba(221, 204, 193, 0.61);
-  margin: 2%;
-  text-align: center; }
+  background-color: rgba(233, 241, 238, 0.8);
+  text-align: center;
+  min-width: 400px;
+  max-width: 940px;
+  margin: 6%; }
+
+.content__btn {
+  margin: 5%;
+  color: #f9d8b1;
+  font-size: .8em;
+  padding: 3%;
+  border: solid rgba(55, 107, 195, 0.38) 1px;
+  text-decoration: none;
+  background-color: rgba(173, 173, 173, 0.32); }
+  @media (max-width: 547px) {
+    .content__btn {
+      float: left; } }
+
+.content__btn:hover {
+  background: rgba(247, 171, 234, 0.29);
+  text-decoration: none;
+  color: white;
+  cursor: pointer; }
 
 .container {
-  color: #2b2b2b; }
+  color: #f4f4f4;
+  font-size: 1.1em;
+  font-family: "Josefin Sans", sans-serif; }
+  @media (min-width: 950px) {
+    .container {
+      font-size: 1.5em; } }
+
+.header, .content__h2 {
+  margin: 5%;
+  color: #9e5b0d;
+  font-size: 1em;
+  font-family: "Arvo", serif; }
+  .header h1, .content__h2 h1 {
+    color: #492a06;
+    margin: 3%; }
+
+.content__h2 {
+  color: #c9a881; }
 
 /*# sourceMappingURL=application.css.map */

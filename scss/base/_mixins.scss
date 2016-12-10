@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@mixin font($color, $size, $family) {
+  color: $color;
+  font-size: $size;
+  font-family: $family;
+}
